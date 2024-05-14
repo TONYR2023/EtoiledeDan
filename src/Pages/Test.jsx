@@ -3,6 +3,9 @@ import magazine from "../assets/magazinePage/magazine.png";
 import Calendar from "@demark-pro/react-booking-calendar";
 
 const Test = () => {
+  //lien avec le serveur
+  const [data, setData] = useState([]);
+
   // changement d'état de la selection des dates
   const [selectedDates, setSelectedDates] = useState([]);
   const [price, setPrice] = useState(0); // État pour stocker le prix
@@ -168,7 +171,7 @@ const Test = () => {
         <div className="cadres mt-2">
           <p>PRIX TTC : {price}€</p>
         </div>
-        {/*------checkbox Prix HT-------*/}
+
         <div>
           <p>
             Convertir le prix en HT

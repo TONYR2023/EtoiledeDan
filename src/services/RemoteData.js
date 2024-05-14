@@ -1,5 +1,5 @@
 export default class RemoteData {
-    static url = "http://localhost:3002/users";
+    static url = "http://localhost:3000/users";
 
     /**
      * Execute une requête Http avec le verbe GET
