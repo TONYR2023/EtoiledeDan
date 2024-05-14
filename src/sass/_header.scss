@@ -1,0 +1,137 @@
+.header-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 20px 0px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 101;
+
+  .contact-info {
+    display: flex;
+    margin-right: 5px;
+
+    span {
+      margin-right: 20px;
+      color: #fbefe2;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    a {
+      color: #fbefe2;
+      text-decoration: none;
+      font-size: calc(0.4em + 0.8vw);
+
+      &:hover {
+        color: #443a2e;
+      }
+    }
+  }
+}
+
+.header {
+  background-color: rgba(65, 57, 52, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+  }
+  .logo-edd {
+    width: 10vw;
+    padding-left: 2em;
+    margin-top: 1rem;
+  }
+  nav {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline;
+        font-size: 24px;
+
+        a {
+          text-decoration: none;
+          color: #fbefe2;
+          font-size: calc(0.4em + 1.2vw);
+
+          &:hover {
+            color: #443a2e;
+          }
+        }
+      }
+    }
+  }
+}
+
+#icons {
+  cursor: pointer;
+  display: none;
+  position: relative;
+  color: #fbefe2;
+  right: -80px;
+}
+
+@media only screen and (max-width: 800px) {
+  .logo-edd {
+   width: 20vw !important;
+
+  }
+
+  #icons {
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    padding: 10px;
+  }
+  #icons:before {
+    content: "\2630";
+  }
+  .active #icons::before {
+    content: "\2715";
+    display: block;
+  }
+
+  nav {
+    ul {
+      position: fixed;
+      right: -100%;
+      top: 40px;
+      color: #fbefe2;
+      flex-direction: column;
+      background-color: rgba(65, 57, 52, 0.6);
+      width: 50%;
+      max-width: 500px;
+      text-align: center;
+      transition: 1s;
+      border-radius: 0.5em;
+
+      li {
+        padding: 10px 0;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+  nav li:hover {
+    background: transparent;
+  }
+  nav.active ul {
+    right: 0;
+    margin-right: 1em;
+  }
+
+ 
+}
