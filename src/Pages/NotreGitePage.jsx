@@ -48,35 +48,16 @@ const NotreGitePage = () => {
               </h3>
 
               <p>
-                Notre maison d’architecte combine design, modernité et caractère
+                <b>
+                  Notre maison d’architecte combine design, modernité et
+                  caractère{" "}
+                </b>
                 pour vous apporter tout le confort durant votre séjour. Ses
                 terrasses, son salon, sa salle de jeu et sa piscine sont
-                notamment conçus pour accueillir les Personnes à Mobilité
-                Réduite tout en mettant à disposition une suite adaptée dont
-                l’accès est facilité grâce à sa rampe PMR.
-              </p>
-              <img
-                src={prestations1}
-                alt=""
-                style={{
-                  width: "10em",
-                  float: "left",
-                  shapeOutside: "margin-box",
-                  margin: "0 20px 5px 0",
-                  borderRadius: "50%",
-                }}
-              ></img>
-
-              <p>
-                La pièce à vivre de 75 m2 est aménagée avec : une cuisine
-                entièrement équipée avec son réfrigérateur américain, sa cave à
-                vin, son grand îlot central, etc. un salon avec sa télévision
-                très grand écran, une salle à manger avec sa grande table
-                pouvant accueillir 12 convives, un billard et un hamac géant,
-                idéal pour la détente. Poursuivez cette douceur de vivre dans
-                l’espace ludique avec sa piscine intérieure et sa baie aquarium
-                ainsi que sa salle de jeux disposant : d’un baby-foot, d’une
-                borne arcade et d’une table de jeux.
+                notamment conçus pour{" "}
+                <b> accueillir les Personnes à Mobilité Réduite</b> tout en
+                mettant à disposition une suite adaptée dont l’accès est
+                facilité grâce à sa rampe PMR.
               </p>
               <img
                 src={prestations1}
@@ -89,15 +70,44 @@ const NotreGitePage = () => {
                   borderRadius: "50%",
                 }}
               ></img>
+
               <p>
-                Pour accueillir jusqu’à <b>12 résidents </b>, le gîte dispose de
-                4 chambres et de 3 Salles d’eau avec douche à l’italienne : Une
-                suite parentale équipée PMR avec son lit en 160x200, son
-                dressing et sa salle d’eau privative Une chambre double avec son
-                lit en 160x200 Deux chambres quadruples avec dressing, idéales
-                pour les familles, puisqu’en plus de leur lit en 160x200, l’une
-                est équipée de 2 fauteuils convertibles 1 place tandis que
-                l’autre dispose d’un canapé convertible 2 places. Enfin, l’une
+                La pièce à vivre de 75 m2 est aménagée avec : <br />- Une
+                cuisine entièrement équipée avec son réfrigérateur américain, sa
+                cave à vin, son grand îlot central, etc. <br />- Un salon avec
+                sa télévision très grand écran, <br />- Une salle à manger avec
+                sa grande table pouvant accueillir 12 convives, <br />- un
+                billard et un hamac géant, idéal pour la détente. <br />
+                Poursuivez cette douceur de vivre dans l’espace ludique :<br />-
+                Avec sa piscine intérieure et sa baie aquarium, <br />- Une
+                salle de jeux disposant : d’un baby-foot, d’une borne arcade et
+                d’une table de jeux.
+              </p>
+              <img
+                src={prestations1}
+                alt=""
+                style={{
+                  width: "10em",
+                  float: "left",
+                  shapeOutside: "margin-box",
+                  margin: "0 20px 5px 0",
+                  borderRadius: "50%",
+                }}
+              ></img>
+              <p>
+                Pour accueillir jusqu’à{" "}
+                <b>
+                  12 résidents, le gîte dispose de 4 chambres et de 3 Salles
+                  d’eau{" "}
+                </b>
+                avec douche à l’italienne :
+                <br />- Une suite parentale équipée PMR avec son lit en 160x200,
+                son dressing et sa salle d’eau privative <br />
+                - Une chambre double avec son lit en 160x200 <br />
+                - Deux chambres quadruples avec dressing, idéales pour les
+                familles, puisqu’en plus de leur lit en 160x200, l’une est
+                équipée de 2 fauteuils convertibles 1 place tandis que l’autre
+                dispose d’un canapé convertible 2 places. <br />- Enfin, l’une
                 des trois terrasses dispose d’une cuisine d’été équipée d’un
                 BBQ.
               </p>
@@ -123,13 +133,16 @@ const NotreGitePage = () => {
                 }}
               ></img>
               <p>
-                Le jardin arboré de 2500 m2 dispose : D’un salon de jardin d’un
-                grand garage avec 2 abris de voitures (équipés de 2 bornes de
-                charge) dans lesquels peuvent stationner 4 véhicules à l’arrière
-                de la maison, d’une aire de stationnement pour 2 véhicules
-                directement en contact avec la rampe PMR, d’un magnifique
-                boulodrome, d’une table de ping-pong et d’un trampoline réservé
-                aux enfants
+                Le jardin arboré de 2500 m2 dispose : <br />
+                - D’un salon de jardin <br />
+                - D’un grand garage avec 2 abris de voitures (équipés de 2
+                bornes de charge) dans lesquels peuvent stationner 4 véhicules à
+                <br />
+                - L’arrière de la maison, d’une aire de stationnement pour 2
+                véhicules directement en contact avec la rampe PMR, <br />
+                - D’un magnifique boulodrome, <br />
+                - D’une table de ping-pong, <br />
+                - D’un trampoline réservé aux enfants
               </p>
 
               {/*------------------Le Plan----------------*/}

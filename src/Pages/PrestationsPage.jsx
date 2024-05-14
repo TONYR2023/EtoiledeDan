@@ -68,14 +68,13 @@ const PrestationsPage = () => {
                     Hostelerie <IoBedOutline />
                   </h3>
                   <p className="m-2">
-                    Plongez dans un séjour de confort et de tranquillité avec
+                    Plongez dans un séjour offrant confort et tranquillité avec
                     notre service d'hostellerie. Nos chambres accueillantes sont
-                    conçues pour offrir une expérience de repos exceptionnelle,
+                    conçues pour offrir une expérience de repos exceptionnel,
                     alliant élégance et fonctionnalité. Que ce soit pour une
-                    escapade romantique, des vacances en famille ou un voyage
-                    d'affaires, notre établissement saura répondre à tous vos
-                    besoins avec soin et attention. De plus, le linge est
-                    fournis ainsi que le menage en fin de sejour.
+                    escapade romantique, des vacances en famille, un moment
+                    « farniente » ou un séminaire d’entreprise, notre
+                    établissement saura répondre à tous vos besoins.
                   </p>
                 </div>
               </div>
@@ -94,14 +93,15 @@ const PrestationsPage = () => {
                     Degustation <PiWineLight />
                   </h3>
                   <p className="m-2">
-                    Laissez vos papilles voyager à travers une explosion de
-                    saveurs avec notre service de dégustation. Nos chefs
-                    talentueux vous feront découvrir le meilleur de la cuisine
-                    régionale, en mettant en valeur les produits locaux frais et
-                    de saison. De la première bouchée au dernier verre, chaque
-                    moment sera une célébration de la gastronomie et du plaisir
-                    culinaire.
+                    Sous la direction du service de dégustation de Florence
+                    DELMAS (Degustez Sud), laissez vos papilles voyager à travers une explosion
+                    de saveurs. Elle vous fera découvrir le meilleur de la
+                    viticulture et des spécialités culinaires régionales, en
+                    mettant en valeur les produits locaux frais et de saison. De
+                    la première bouchée au dernier verre, chaque moment sera une
+                    célébration épicurienne de la gastronomie.
                   </p>
+                  <a href="http://degustezsud.com">Degustez Sud</a>
                 </div>
               </div>
 
@@ -115,11 +115,12 @@ const PrestationsPage = () => {
                     Massage <TbMassage />
                   </h3>
                   <p className="m-2">
-                    Offrez-vous un moment de détente et de bien-être absolu avec
-                    notre service de massage. Nos thérapeutes expérimentés vous
-                    accueilleront dans un havre de paix où vous pourrez vous
-                    abandonner aux mains expertes pour soulager le stress et les
-                    tensions. Laissez-vous envelopper par des techniques de
+                    A 5 minutes à pied du gîte, ressourcez vous en vous offrant
+                    un moment de détente et de bien-être absolu grâce au spa
+                    privatif, au sauna et aux massages proposés par OC’TAO. Vous
+                    y découvrirez un havre de paix où vous pourrez vous
+                    abandonner à leurs mains expertes pour soulager le stress et
+                    les tensions. Laissez-vous envelopper par des techniques de
                     massage apaisantes qui vous laisseront revitalisé et
                     régénéré.
                   </p>
@@ -136,14 +137,15 @@ const PrestationsPage = () => {
                     Chef à Domicile <LuChefHat />
                   </h3>
                   <p className="m-2">
-                    Transformez votre séjour en une expérience gastronomique
-                    inoubliable avec notre service de chef à domicile. Nos chefs
+                    Avec takeachef et l’un de ses 78 chefs à domicile,
+                    personnalisez votre menu pour transformer votre séjour en
+                    une expérience gastronomique inoubliable. Ces chefs
                     professionnels viendront directement dans votre logement
                     pour préparer des repas sur mesure, adaptés à vos goûts et
                     préférences. Que ce soit pour une occasion spéciale ou
                     simplement pour savourer un dîner exclusif dans le confort
-                    de votre chez-vous, notre service de chef à domicile vous
-                    garantit une expérience culinaire exceptionnelle.
+                    de votre chez-vous, vivez une expérience culinaire
+                    exceptionnelle !
                   </p>
                 </div>
               </div>
@@ -169,7 +171,7 @@ const PrestationsPage = () => {
                     authentiques de notre destination. Que vous soyez amateur
                     d'aventure, de culture ou de nature, notre service de
                     découverte touristique vous promet des moments de découverte
-                    et d'émerveillement.
+                    et d’émerveillement.
                   </p>
                 </div>
               </div>
