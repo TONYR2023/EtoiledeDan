@@ -3,9 +3,6 @@ import magazine from "../assets/magazinePage/magazine.png";
 import Calendar from "@demark-pro/react-booking-calendar";
 
 const Test = () => {
-  //lien avec le serveur
-  const [data, setData] = useState([]);
-
   // changement d'état de la selection des dates
   const [selectedDates, setSelectedDates] = useState([]);
   const [price, setPrice] = useState(0); // État pour stocker le prix
@@ -70,6 +67,7 @@ const Test = () => {
               "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
               "- Le week-end : du Vendredi soir au Lundi matin "
           );
+
         default:
           return alert(
             "vous devez choisir des dates comprenant : \n" +
@@ -77,6 +75,7 @@ const Test = () => {
               "- Les 4 premiers jours de la semaine : du Lundi soir au Vendredi matin \n" +
               "- Le week-end : du Vendredi soir au Lundi matin "
           );
+    
       }
     }
     //pleine saison
@@ -140,51 +139,86 @@ const Test = () => {
     setPriceHT(0);
   };
 
-  return (
-    <main>
-      <div className="backgroundImageContainer">
-        <img src={magazine} alt="magazine" className="backgroundImage" />
-        <div className="buttonContainer"></div>
-      </div>
-      <h2 className="mt-2">Magazine</h2>
-      <div className="d-flex justify-content-center">
-        <hr className="separator" />
-      </div>
-      {/*-----------------Calendrier ------------*/}
-      <div className="d-flex row justify-content-center">
-        <section className="card" style={{ width: "30em" }}>
-          <Calendar
-            selected={selectedDates}
-            onChange={handleChange}
-            onOverbook={(e, err) => alert(err)}
-            range={true}
-            reserved={reserved}
-          />
-        </section>
-        {/*------button reinitialisation calendrier-------*/}
-        <div className="d-flex justify-content-center">
-          <button onClick={handleReset} className="but-reset btn-warning mt-1">
-            Réinitialiser le calendrier
-          </button>
-        </div>
-        {/*------Prix TTC-------*/}
-        <div className="cadres mt-2">
-          <p>PRIX TTC : {price}€</p>
-        </div>
+  // bouton valider
+  const handleSubmit = () => {
+    const formData = {
+      selectedDates: selectedDates,
+      price: price,
+    };
+    fetch("/api/reservation", {
+      method: "POST",
+      headers: { "content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        // Vérifier si la requête a réussi (status 2xx)
+        if (!response.ok) {
+          throw new Error("Erreur lors de la requête au serveur");
+        }
+        // Réinitialiser les états si nécessaire
+        setSelectedDates([]);
+        setPrice(0);
+      })
+      .catch((error) => {
+        // Gérer les erreurs de requête
+        console.error("Erreur lors de la requête au serveur:", error);
+      });
+  };
 
-        <div>
-          <p>
-            Convertir le prix en HT
-            <input
-              type="checkbox"
-              className="checkboxHt"
-              onChange={handleCheckboxChange}
-            />
-            PRIX HT : {priceHT}€
-          </p>
+  return (
+    <>
+      <main>
+        <div className="backgroundImageContainer">
+          <img src={magazine} alt="magazine" className="backgroundImage" />
+          <div className="buttonContainer"></div>
         </div>
-      </div>
-    </main>
+        <h2 className="mt-2">Magazine</h2>
+        <div className="d-flex justify-content-center">
+          <hr className="separator" />
+        </div>
+        {/*-----------------Calendrier ------------*/}
+        <div className="d-flex row justify-content-center">
+          <section className="card" style={{ width: "30em" }}>
+            <Calendar
+              selected={selectedDates}
+              onChange={handleChange}
+              onOverbook={(e, err) => alert(err)}
+              range={true}
+              reserved={reserved}
+            />
+          </section>
+
+          {/*------button reinitialisation calendrier-------*/}
+          <div className="d-flex justify-content-center">
+            <button
+              onClick={handleReset}
+              className="but-reset btn-warning mt-1"
+            >
+              Réinitialiser le calendrier
+            </button>
+          </div>
+          {/*------Prix TTC-------*/}
+          <div className="cadres mt-2">
+            <p>PRIX TTC : {price}€</p>
+          </div>
+
+          <div>
+            <p>
+              Convertir le prix en HT
+              <input
+                type="checkbox"
+                className="checkboxHt"
+                onChange={handleCheckboxChange}
+              />
+              PRIX HT : {priceHT}€
+            </p>
+          </div>
+        </div>
+        <button type="button" onClick={handleSubmit}>
+          valider
+        </button>
+      </main>
+    </>
   );
 };
 
