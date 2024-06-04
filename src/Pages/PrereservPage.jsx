@@ -150,17 +150,9 @@ const Prereserv = () => {
                     selected={selectedDates}
                     onChange={handleChange}
                     onOverbook={(e, err) => alert(err)}
-                    components={{
-                      DayCellFooter: ({ innerProps }) => (
-                        <div {...innerProps}></div>
-                      ),
-                      DayCellHeader: ({ innerProps }) => (
-                        <div className="dayCellHeader" {...innerProps}></div>
-                      ),
-                    }}
-                    disabled={(date, state) => !state.isSameMonth}
+                //    disabled={(date, state) => !state.isSameMonth}
                     reserved={reserved}
-                    variant="events"
+                //    variant="events"
                     dateFnsOptions={{ weekStartsOn: 1 }}
                     range={true}
                   />
