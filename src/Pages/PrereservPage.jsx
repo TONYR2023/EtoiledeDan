@@ -3,7 +3,7 @@ import Calendar from "@demark-pro/react-booking-calendar";
 import gite from "../assets/gitePage/gite.png";
 import "./../sass/_preReserv.scss";
 import FormulaireContact from "../components/FormulaireContact";
-import Options_Assurances from "../components/Options_Assurances";
+import Options from "../components/Options";
 import { useOutletContext } from "react-router-dom";
 
 const Prereserv = () => {
@@ -140,9 +140,7 @@ const Prereserv = () => {
             <div className="col-md-4">
               <h3 className="visually-hidden">Calendrier</h3>
               {/*------------------Calendrier----------------*/}
-
               {/*a definir pour choisir les dates de reservations */}
-              {isLoggedIn}
 
               <section className="calendar">
                 <div className="calendarContainer">
@@ -150,9 +148,9 @@ const Prereserv = () => {
                     selected={selectedDates}
                     onChange={handleChange}
                     onOverbook={(e, err) => alert(err)}
-                //    disabled={(date, state) => !state.isSameMonth}
+                    //    disabled={(date, state) => !state.isSameMonth}
                     reserved={reserved}
-                //    variant="events"
+                    //    variant="events"
                     dateFnsOptions={{ weekStartsOn: 1 }}
                     range={true}
                   />
@@ -196,11 +194,11 @@ const Prereserv = () => {
               <h3 className="visually-hidden">Options & Assurance</h3>
               {/*------------------options----------------*/}
               <section className="center">
-                <Options_Assurances />
+                <Options />
               </section>
             </div>
             {/*------------------bloc3----------------*/}
-            <div className="col-md-4 bg-primary mt-2 ">
+            <div className="col-md-4 mt-2 ">
               <h3 className="visually-hidden">Formulaire de Contact</h3>
               {/*------------------options----------------*/}
 

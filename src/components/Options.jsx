@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./../sass/_options.scss";
 import { Link } from "react-router-dom";
 
-const Options_Assurances = () => {
+const Options = () => {
   const [count, setCount] = useState(8);
   const [total, setTotal] = useState(200);
   const [openBreakfast, setopenBreakfast] = useState(false);
@@ -130,4 +130,4 @@ const Options_Assurances = () => {
     </div>
   );
 };
-export default Options_Assurances;
+export default Options;
