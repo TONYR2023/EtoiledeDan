@@ -10,33 +10,39 @@ const FormulaireContact = () => {
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+    e.preventDefault(); //empeche le comportement par defaut du formulaire
+    const form = e.target; //e.target fait réference à <form>
+    const formData = new FormData(form); //FormData permet de construire des paires clé/valeur 
 
-    const nom = formData.get("nom");
+    const nom = formData.get("nom"); //recupère la valeur et la stocke dans la variable nom
     const prenom = formData.get("prenom");
     const email = formData.get("email");
     const telephone = formData.get("telephone");
     const description = formData.get("description");
 
     // Valider les données avant de les soumettre
-    if (!validateNom(nom) || !validatePrenom(prenom) || !validateEmail(email) || !validateTelephone(telephone)) {
+    if (
+      !validateNom(nom) ||
+      !validatePrenom(prenom) ||
+      !validateEmail(email) ||
+      !validateTelephone(telephone)
+    ) {
       // Si les données ne sont pas valides, ne pas soumettre le formulaire
       return;
     }
+        console.log(
+          `Nom: ${nom} Prénom: ${prenom} Email: ${email} Téléphone: ${telephone} Description: ${description}`
+        );
 
-    // Soumettre le formulaire
+    // Reinitialiser le formulaire
     form.reset();
-
-    console.log(
-      `Nom: ${nom} Prénom: ${prenom} Email: ${email} Téléphone: ${telephone} Description: ${description}`
-    );
   };
 
+  // verification de l'onglet nom
   const validateNom = (nom) => {
-    // Votre expression régulière pour valider le nom
+    // Expression régulière pour valider le nom
     const regex = /^[A-Za-zÀ-ÖØ-öø-ÿ-]+$/;
+    //...prevState opérateur de décomposition, copie toutes les propriétés de l'état precédent dans un nouvel objet
     if (!regex.test(nom)) {
       setValidationErrors((prevState) => ({
         ...prevState,
@@ -103,7 +109,6 @@ const FormulaireContact = () => {
     setValidationErrors((prevState) => ({ ...prevState, description: "" }));
     return true;
   };
-
 
   return (
     <>

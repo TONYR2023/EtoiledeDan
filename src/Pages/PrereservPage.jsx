@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Calendar from "@demark-pro/react-booking-calendar";
-import gite from "../assets/gitePage/gite.png";
-import "./../sass/_preReserv.scss";
 import FormulaireContact from "../components/FormulaireContact";
 import Options from "../components/Options";
+import gite from "../assets/gitePage/gite.png";
+import "./../sass/_preReserv.scss";
 import { useOutletContext } from "react-router-dom";
 
 const Prereserv = () => {
-  const [selectedDates, setSelectedDates] = useState([]); //Etat pour selectionner les dates avec le range
+  const [selectedDates, setSelectedDates] = useState([]);
+  //Etat pour selectionner les dates avec le range
   const [price, setPrice] = useState(0); // État pour stocker le prix
-  const [isLoggedIn, setIsLoggedIn] = useOutletContext();
 
   // Définir les dates réservées
   const reserved = [
@@ -27,9 +27,10 @@ const Prereserv = () => {
     // Calculer le nombre de jours sélectionnés
     const startDate = new Date(dates[0]);
     const endDate = new Date(dates[dates.length - 1]);
+    //fonction Math.bas() renvoie une valeur absolue,jamais négative
     const timeDiff = Math.abs(endDate - startDate);
 
-    // Convertir en jours
+    // Convertir en jours, Math.ceil()renvoie un entier
     const numberOfDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
     //conversion des boutons debut et fin
@@ -66,6 +67,7 @@ const Prereserv = () => {
           );
       }
     }
+    
     //pleine saison
     else if ([6, 7].includes(startDate.getMonth())) {
       console.log("pleine saison:", startDate.getMonth());
